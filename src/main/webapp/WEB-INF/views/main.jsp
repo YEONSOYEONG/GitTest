@@ -4,21 +4,54 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="../resources/css/main.css">
+<script src = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style></style>
 </head>
 <body>
-	<h3>폐기 기능</h3>
-	<p>commit 하기 전 상태의 파일을 삭제하는 기능이다.</p>
-	
-	<h3>commit 한 내용을 취소하고 싶을 경우</h3>
-	<p>1. 브렌치 초기화 - 특정 지점으로 브렌치를 초기화 한다. (이전 브렌치를 없앤다.)</p>
-	<p>2. reverse commit - 특정 버전에서 실행한 내용을 취소하고 최종 버전을 유지하여 새로운 커밋을 생성</p>
-	<p>불필요한 내용 </p>
-	
-	<h3>브랜치</h3>
-	<p>브랜치는 편리하지만 문제점이 많다.</p>
-	<p>이상적으로는 같은 파일의 같은 부분을 건드리지 않으면 되지만, 현실은 그렇지 않다.</p>
+	<!-- header start -->
+    <header id="main_header">
+        <nav>
+            <ul class="login_menu">
+                <li><a href="#">로그인</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header end -->
+    <section>
+        <div class="logo">
+            <a href="#"><img src="../resources/img/logo.png" class="logo"/><br/></a>
+        </div>
+        <form class="search" action="bookSearch.do" method="get">
+            <select name="bookSearchOption">
+                <option value="all" selected>전체</option>
+                <option value="b_title">제목</option>
+                <option value="writer">저자</option>
+                <option value="publisher">출판사</option>
+            </select>
+            <input type="text" name="bookSearchWord" placeholder="도서 검색">
+            <button type="submit" class="btn_search"></button>
+        </form>
+        <div class="menu">
+            <ul class="icons">
+                <li>
+                    <a href="#"><img src="../resources/img/mypage.png"/><br/>공지사항</a>
+                </li>
+                <li><!-- href 나중에 변경해야함 (임시.)-->
+                    <a href="/bookList.go"><img src="../resources/img/mypage.png"/><br/>마이페이지</a>
+                </li>
+                <li>
+                    <a href="#"><img src="../resources/img/mypage.png"/><br/>도서반납연기</a>
+                </li>
+                <li>
+                    <a href="#"><img src="../resources/img/mypage.png"/><br/>건의사항</a>
+                </li>
+                <li>
+                    <a href="#"><img src="../resources/img/mypage.png"/><br/>열람실</a>
+                </li>
+            </ul>
+        </div>
+    </section>
 </body>
 <script></script>
 </html>
